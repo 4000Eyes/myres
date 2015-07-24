@@ -1,0 +1,2 @@
+SET autocommit=0; source /var/www/html/effres/tables.sql; COMMIT;
+

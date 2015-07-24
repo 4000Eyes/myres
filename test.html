@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Demo</title>
+  <link rel="stylesheet" href="jquery/jquery-ui-1.11.1/jquery-ui.min.css" type="text/css" /> 
+</head>
+<body> 
+
+	<form action='' method='post'>
+		<p><label>Country:</label><input type='text' name='country' value='' class='auto'></p>
+	</form>
+<script type="text/javascript" src="jquery/jquery-ui-1.11.1/jquery-ui.min.js"></script>	
+$(function() {
+	
+	//autocomplete
+
+	ajax({
+                type: 'GET',
+		url: 'http://localhost/effres/api/getTitle'+ $(country).val(),
+                dataType: "json",
+                success: renderList
+        });
+
+	$(".auto").autocomplete({
+		url: 'http://localhost/effres/api/getTitle'+ $(country).val(),
+		minLength: 1
+	});				
+});
+</script>
+</body>
+</html>
