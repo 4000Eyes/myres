@@ -31,28 +31,28 @@ class CSiteGlobalConfig
 			return '';
 	}
 	
-/*
+
 	public function getDBPassword()
 	{
 		if ( $this::Init())
-			return $__arGlobalConfigArray["db_password"];
+			return self::$__arGlobalConfigArray['database']["db_password"];
 		return '';
 	}
 	
 	public function getDBHost()
 	{
 		if ($this->Init())
-			return $__arGlobalConfigArray["db_host"];
+			return self::$__arGlobalConfigArray['database']["db_host"];
 		return '';
 	}
 	
 	public function getDBSchema()
 	{
 		if ( $this->Init() )
-			return $__arGlobalConfigArray["db_schema"] ;
+			return self::$__arGlobalConfigArray['database']["db_schema"] ;
 		return '';
 	}
-	
+/*	
 	public function getMemCacheHost()
 	{
 		if ( $this->Init() ) 
